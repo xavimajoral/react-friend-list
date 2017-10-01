@@ -1,4 +1,6 @@
 :local(.friendList) {
   padding-left: 0;
   margin-bottom: 0;
+  height: 162px;
+  background-color: white;
 }
