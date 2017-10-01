@@ -13,6 +13,8 @@ class FriendList extends Component {
             id={index}
             name={friend.name}
             starred={friend.starred}
+            currentPage={this.props.currentPage}
+            sex={friend.sex}
             {...this.props.actions} />
         );
       })

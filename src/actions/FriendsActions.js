@@ -1,22 +1,25 @@
 import * as types from '../constants/ActionTypes';
 
-export function addFriend(name) {
+export function addFriend(name, sex) {
   return {
     type: types.ADD_FRIEND,
-    name
+    name,
+    sex
   };
 }
 
-export function deleteFriend(id) {
+export function deleteFriend(id, currentPage) {
   return {
     type: types.DELETE_FRIEND,
-    id
+    id,
+    currentPage
   };
 }
 
-export function starFriend(id) {
+export function starFriend(id, currentPage) {
   return {
     type: types.STAR_FRIEND,
-    id
+    id,
+    currentPage
   };
 }

@@ -18,13 +18,13 @@ class Pagination extends Component {
 
   componentWillMount() {
     if (this.props.friends && this.props.friends.length) {
-      this.setPage(this.props.initialPage);
+      this.setPage(this.props.currentPage || 1);
     }
   }
 
   componentDidUpdate(prevProps, prevState) {
     if (this.props.friends !== prevProps.friends) {
-      this.setPage(this.props.initialPage);
+      this.setPage(this.props.currentPage || 1);
     }
   }
 
@@ -42,7 +42,7 @@ class Pagination extends Component {
 
     this.setState({ pager: pager });
 
-    this.props.changePagination(pageItems);
+    this.props.changePagination(pageItems, pager.currentPage);
   }
 
   getPager(totalFriends, currentPage = 1) {

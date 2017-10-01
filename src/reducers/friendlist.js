@@ -25,18 +25,21 @@ export default function friends(state = initialState, action) {
         friendsById: [
           ...state.friendsById,
           {
-            name: action.name
+            name: action.name,
+            sex: action.sex
           }
         ],
       };
     case types.DELETE_FRIEND:
+      const updatedIndexDel = action.id + (action.currentPage - 1)*2;
       return {
         ...state,
-        friendsById: state.friendsById.filter((item, index) => index !== action.id)
+        friendsById: state.friendsById.filter((item, index) => index !== updatedIndexDel)
       };
     case types.STAR_FRIEND:
       let friends = [...state.friendsById];
-      let friend = friends.find((item, index) => index === action.id);
+      const updatedIndex = action.id + (action.currentPage - 1)*2;
+      let friend = friends.find((item, index) => index === updatedIndex);
       friend.starred = !friend.starred;
       return {
         ...state,

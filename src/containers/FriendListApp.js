@@ -22,8 +22,8 @@ class FriendListApp extends Component {
       <div className={styles.friendListApp}>
         <h1>The FriendList</h1>
         <AddFriendInput addFriend={actions.addFriend} />
-        <FriendList friends={this.props.pagination.pageItems} actions={actions} {...pagination} />
-        <Pagination friends={friendsById} {...pagination} changePagination={actions.changePagination} />
+        <FriendList friends={this.props.pagination.pageItems} currentPage={this.props.pagination.currentPage} actions={actions} />
+        <Pagination friends={friendsById} {...pagination} changePagination={actions.changePagination} currentPage={this.props.pagination.currentPage}/>
       </div>
     );
   }

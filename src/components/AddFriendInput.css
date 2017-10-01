@@ -1,6 +1,43 @@
 :local(.addFriendInput) {
   border-radius: 0;
-  border-color: #ABAAAA;
-  border-left: 0;
-  border-right: 0;
+  width: 90%;
+  margin: 10px auto;
+}
+
+form {
+  background-color: white;
+  border-bottom: 1px solid #ABAAAA;
+}
+
+form:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+form > p, form > div {
+  float: left;
+  padding: 5px;
+}
+
+form > p {
+  margin-left: 11px;
+  font-weight: bold;
+}
+
+form > div {
+  margin-right: 5px;
+}
+
+form > div > label {
+  font-weight: normal;
+}
+
+form button {
+  float: right;
+  margin-right: 15px;
+}
+
+form input[type=radio] {
+  margin-right: 5px;
 }
