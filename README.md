@@ -12,8 +12,10 @@ open http://localhost:3000
 - Please add option to select sex of a friend male/female and display it
 - Please add tests using your preferred testing tool (jest, mocha, should.js ...)
 
-## Objectives
+## Test
 
-- You have received a working example so please do not upgrade any packages unless you really have to.
-- Please check for small things like syntax errors, since details matter.
-- Please deliver something that works, non working project is an automatic disqualification
+- I've choosen Mocha, Chai and Enzyme for testing
+- To run the tests:
+```
+yarn test
+```
